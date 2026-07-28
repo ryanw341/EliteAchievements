@@ -1,0 +1,53 @@
+{
+  "name": "ed-companion",
+  "version": "0.1.0",
+  "private": true,
+  "author": "CMDR Galaxy Father",
+  "description": "Elite Dangerous companion — reads the Player Journal live and tracks your commander's status, checklists, permits, and notable systems.",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "app": "electron .",
+    "build": "node build/build.mjs",
+    "dist": "electron-builder --win"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "electron": "^43.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.galaxyfather.edcompanion",
+    "productName": "ED Companion",
+    "asar": false,
+    "directories": {
+      "output": "dist-app",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**",
+      "src/**",
+      "data/reference/**",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "ED Companion"
+    },
+    "portable": {
+      "artifactName": "ED-Companion-portable.exe"
+    }
+  }
+}

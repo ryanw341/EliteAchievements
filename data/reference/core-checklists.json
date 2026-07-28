@@ -1,0 +1,126 @@
+{
+  "_note": "Core-gameplay checklists. `auto` rules are evaluated by the checklist engine against derived state; null = manual tick with `detection` as a hint.",
+  "categories": [
+    {
+      "category": "Engineer Unlocks",
+      "blurb": "The essential engineers that define most ship builds. Unlocking is step one — grade them up for the strongest blueprints.",
+      "items": [
+        { "id": "c-eng-farseer", "item": "Unlock Felicity Farseer (FSD — Deciat)", "description": "The single most important engineer: grade 5 FSD range, plus thrusters and sensors. Needs 1 Meta-Alloy.", "auto": { "type": "engineerUnlocked", "name": "Felicity Farseer" } },
+        { "id": "c-eng-martuuk", "item": "Unlock Elvira Martuuk (FSD — Khun)", "description": "Early FSD engineer and a stepping stone toward Palin. Unlock by travelling 300 Ly from start.", "auto": { "type": "engineerUnlocked", "name": "Elvira Martuuk" } },
+        { "id": "c-eng-dweller", "item": "Unlock The Dweller (Power Distributor — Wyrd)", "description": "Grade 5 power distributor mods — essential for combat and mining. Unlock by using 5 black markets.", "auto": { "type": "engineerUnlocked", "name": "The Dweller" } },
+        { "id": "c-eng-mcquinn", "item": "Unlock Tod McQuinn (Kinetic weapons — Wolf 397)", "description": "Grade 5 multi-cannons and railguns. Core combat engineer. Deliver 15 bounty vouchers.", "auto": { "type": "engineerUnlocked", "name": "Tod 'The Blaster' McQuinn" } },
+        { "id": "c-eng-selene", "item": "Unlock Selene Jean (Armour & Hull — Kuk)", "description": "Grade 5 armour and hull reinforcement — critical survivability. Mine 500 t of ore.", "auto": { "type": "engineerUnlocked", "name": "Selene Jean" } },
+        { "id": "c-eng-palin", "item": "Unlock Professor Palin (Dirty Drive Tuning — Arque)", "description": "Grade 5 Dirty Drive Tuning for maximum thruster speed. Requires 5,000 Ly from start + Qwent G3.", "auto": { "type": "engineerUnlocked", "name": "Professor Palin" } },
+        { "id": "c-eng-shield", "item": "Unlock a shield engineer (Lei Cheung / Didi Vatermann)", "description": "Lei Cheung grades shield generators; Didi Vatermann grades shield boosters. Defines any defensive build.", "auto": { "type": "engineerUnlockedAnyOf", "names": ["Lei Cheung", "Didi Vatermann"] } },
+        { "id": "c-eng-grade5", "item": "Grade an engineer to Grade 5", "description": "Unlocking is only step one — raise reputation with an engineer to Grade 5 to access the strongest blueprints.", "auto": { "type": "engineerGrade", "min": 5 } }
+      ]
+    },
+    {
+      "category": "Guardian Tech Unlocks",
+      "blurb": "Ancient Guardian technology — the Guardian FSD Booster and anti-Xeno weapons are near-mandatory endgame gear.",
+      "items": [
+        { "id": "c-grd-visit", "item": "Visit a Guardian Ruins / Structure site", "description": "Travel to the Guardian regions (around Synuefe / Col 173) and activate a site with an SRV to farm blueprint fragments and materials.", "auto": null },
+        { "id": "c-grd-fragment", "item": "Obtain a Guardian module blueprint fragment", "description": "Solve the pylon/relic puzzle at a Guardian structure to receive the blueprint fragment required for module unlocks.", "auto": null },
+        { "id": "c-grd-fsd", "item": "Unlock the Guardian FSD Booster", "description": "The highest-impact Guardian module — a flat jump-range bonus (up to +10.56 Ly). Unlocked at a Guardian Tech Broker.", "auto": { "type": "moduleOwned", "contains": "guardianfsdbooster" } },
+        { "id": "c-grd-weapons", "item": "Unlock Guardian weapons (Gauss / Plasma / Shard)", "description": "Guardian anti-Xeno weapons — essential for Thargoid combat. Gauss cannons are the AX meta.", "auto": { "type": "moduleOwned", "contains": "guardian_gausscannon" } },
+        { "id": "c-grd-defensive", "item": "Unlock Guardian defensive modules", "description": "Guardian Module/Shield/Hull Reinforcement improve survivability, especially vs Thargoids.", "auto": { "type": "moduleOwned", "contains": "guardianhullreinforcement" } },
+        { "id": "c-grd-ramtah", "item": "Run Ram Tah's Guardian mission line (Meene)", "description": "'Decoding the Ancient Ruins/Tombs' missions reward credits and lore and complement Guardian farming.", "auto": null }
+      ]
+    },
+    {
+      "category": "Exploration Essentials",
+      "blurb": "From the first honk to the neutron highway and landmark expeditions.",
+      "items": [
+        { "id": "c-exp-honk", "item": "Perform your first Discovery Scan (the 'honk')", "description": "Fire the Discovery Scanner on arrival to reveal all bodies — the foundational exploration action.", "auto": { "type": "event", "events": ["FSSDiscoveryScan"] } },
+        { "id": "c-exp-fss", "item": "Complete a full FSS scan of a system", "description": "Resolve every signal in a system, mapping all bodies for maximum data value.", "auto": { "type": "event", "events": ["FSSAllBodiesFound"] } },
+        { "id": "c-exp-dss", "item": "Map a planet with DSS probes", "description": "Use the Detailed Surface Scanner to probe a body — required for bio/geo signals and the mapping bonus.", "auto": { "type": "event", "events": ["SAAScanComplete"] } },
+        { "id": "c-exp-r2r", "item": "Run the Road to Riches route", "description": "Scan and map high-value bodies (ELWs, water worlds, terraformables) along a curated route for fast credits and rank.", "auto": null },
+        { "id": "c-exp-sell", "item": "Sell exploration data (first cash-in)", "description": "Turn in your first batch of cartographic data at Universal Cartographics.", "auto": { "type": "event", "events": ["SellExplorationData", "MultiSellExplorationData"] } },
+        { "id": "c-exp-elite", "item": "Reach Elite in Exploration", "description": "A landmark rank that unlocks prestige and the Founders World permit.", "auto": { "type": "rank", "key": "Explore", "min": 8 } },
+        { "id": "c-exp-neutron", "item": "Use the neutron highway (FSD supercharge)", "description": "Fly through a neutron star's jet cone to supercharge the FSD for a ~300% jump-range boost.", "auto": { "type": "event", "events": ["JetConeBoost"] } },
+        { "id": "c-exp-landmark", "item": "Reach a landmark destination (Sag A* / Colonia / Beagle Point)", "description": "Completing a long expedition to a famous location is a defining exploration achievement.", "auto": { "type": "visitedAnyOf", "systems": ["Sagittarius A*", "Colonia", "Ceeckia ZQ-L c24-0"] } }
+      ]
+    },
+    {
+      "category": "Combat Essentials",
+      "blurb": "Build a fighting ship, engineer it, and put it to work in RES sites and Conflict Zones.",
+      "items": [
+        { "id": "c-cbt-ship", "item": "Acquire a dedicated combat ship", "description": "Buy and outfit a purpose-built combat hull (Vulture, Chieftain, Krait MkII, Python MkII, etc.).", "auto": null },
+        { "id": "c-cbt-dirty", "item": "Engineer thrusters with Dirty Drive Tuning", "description": "The speed needed to win dogfights (Palin/Chloe/Mel Brandon).", "auto": null },
+        { "id": "c-cbt-res", "item": "Bounty-hunt in a (Haz)RES", "description": "Hunt wanted ships in a Resource Extraction Site and cash in bounty vouchers — the core PvE loop.", "auto": { "type": "event", "events": ["Bounty"] } },
+        { "id": "c-cbt-cz", "item": "Fight in a Conflict Zone", "description": "Join a Conflict Zone for a faction to earn combat bonds and reputation.", "auto": { "type": "event", "events": ["FactionKillBond"] } },
+        { "id": "c-cbt-elite", "item": "Reach Elite in Combat", "description": "Combat Elite (rank 8) — a prestige mastery milestone.", "auto": { "type": "rank", "key": "Combat", "min": 8 } },
+        { "id": "c-cbt-ax", "item": "Equip AX/Guardian weapons and engage Thargoids", "description": "Fit anti-Xeno weaponry and take on Thargoid Scouts/Interceptors.", "auto": { "type": "moduleOwned", "contains": "atmulticannon" } }
+      ]
+    },
+    {
+      "category": "Trading & Mining Essentials",
+      "blurb": "Build capital through trade routes and lucrative core mining.",
+      "items": [
+        { "id": "c-trd-run", "item": "Complete a profitable trade run", "description": "Buy low and sell high on a commodity loop to build capital and Trade rank.", "auto": { "type": "event", "events": ["MarketSell"] } },
+        { "id": "c-trd-elite", "item": "Reach Elite in Trade", "description": "Trade Elite (rank 8) — a master trader, and a step toward Triple Elite.", "auto": { "type": "rank", "key": "Trade", "min": 8 } },
+        { "id": "c-min-laser", "item": "Laser-mine a metallic/icy ring", "description": "Use mining lasers, a refinery, and collector limpets — the entry-level mining loop.", "auto": { "type": "event", "events": ["MiningRefined"] } },
+        { "id": "c-min-core", "item": "Core-mine Void Opals / Painite / LTDs", "description": "Crack motherlode asteroids with seismic charges to extract high-value cores — the most lucrative mining.", "auto": { "type": "event", "events": ["AsteroidCracked"] } },
+        { "id": "c-min-loadout", "item": "Fit a full mining loadout", "description": "Mining lasers, abrasion blaster, displacement missile, seismic charge launcher, prospector + collector controllers, refinery.", "auto": { "type": "moduleOwned", "contains": "mininglaser" } }
+      ]
+    },
+    {
+      "category": "On-Foot / Odyssey Basics",
+      "blurb": "Suits, weapons, exobiology, and settlement gameplay on foot.",
+      "items": [
+        { "id": "c-ody-disembark", "item": "Disembark and explore on foot for the first time", "description": "Leave your ship/SRV onto a planet or station concourse — the gateway to all Odyssey content.", "auto": { "type": "event", "events": ["Disembark"] } },
+        { "id": "c-ody-suits", "item": "Buy your first suits (Maverick / Dominator / Artemis)", "description": "The three specialist suits: scavenging, combat, and exploration/exobiology.", "auto": { "type": "event", "events": ["BuySuit"] } },
+        { "id": "c-ody-weapons", "item": "Buy on-foot weapons", "description": "Kinetic, plasma, and laser handheld weapons for combat and settlement raids.", "auto": { "type": "event", "events": ["BuyWeapon"] } },
+        { "id": "c-ody-engineer", "item": "Unlock a suit/weapon engineer", "description": "Unlock an on-foot engineer to add mods and raise suit grade.", "auto": { "type": "engineerUnlockedType", "engType": "onfoot" } },
+        { "id": "c-ody-upgrade", "item": "Upgrade a suit to a higher grade", "description": "Spend suit-upgrade materials to raise a suit toward Grade 5 for more slots and health.", "auto": { "type": "event", "events": ["UpgradeSuit"] } },
+        { "id": "c-ody-exobio", "item": "Sample & register exobiology (3 samples → Vista Genomics)", "description": "Take three Genetic Sampler scans of an organism, then sell the data at Vista Genomics.", "auto": { "type": "event", "events": ["ScanOrganic"] } },
+        { "id": "c-ody-raid", "item": "Complete a settlement raid", "description": "Infiltrate an Odyssey settlement to steal data/goods, complete a mission, or clear hostiles.", "auto": null }
+      ]
+    },
+    {
+      "category": "Fleet Carrier",
+      "blurb": "Your personal mobile base with 16 landing pads — the ultimate quality-of-life asset.",
+      "items": [
+        { "id": "c-fc-buy", "item": "Purchase a Fleet Carrier", "description": "Buy a Drake-class carrier (~5 billion credits).", "auto": { "type": "event", "events": ["CarrierBuy"] } },
+        { "id": "c-fc-fuel", "item": "Fuel the carrier with Tritium", "description": "Mine or buy Tritium and deposit it to enable jumps and upkeep.", "auto": { "type": "event", "events": ["CarrierDepositFuel"] } },
+        { "id": "c-fc-services", "item": "Set up carrier services", "description": "Install Refuel, Repair, Rearm, Shipyard, Outfitting, and Market so it's a full-service base.", "auto": null },
+        { "id": "c-fc-jump", "item": "Perform a Fleet Carrier jump", "description": "Plot and execute a carrier hyperspace jump (up to 500 Ly).", "auto": { "type": "event", "events": ["CarrierJump", "CarrierJumpRequest"] } },
+        { "id": "c-fc-orders", "item": "Set buy/sell orders on the carrier market", "description": "Configure commodity trade orders for passing commanders.", "auto": { "type": "event", "events": ["CarrierTradeOrder"] } },
+        { "id": "c-fc-finance", "item": "Manage carrier finances / upkeep", "description": "Deposit credits and monitor weekly upkeep to avoid decommission.", "auto": null }
+      ]
+    },
+    {
+      "category": "Powerplay",
+      "blurb": "Pledge to a galactic Power to earn merits and unlock exclusive modules.",
+      "items": [
+        { "id": "c-pp-pledge", "item": "Pledge to a Power", "description": "Pledge allegiance (Powerplay 2.0) to begin earning merits and Power-specific rewards.", "auto": { "type": "event", "events": ["PowerplayJoin", "Powerplay"] } },
+        { "id": "c-pp-merits", "item": "Earn your first merits", "description": "Complete Powerplay activities in acquisition/reinforcement systems to accumulate merits.", "auto": { "type": "event", "events": ["PowerplayMerits"] } },
+        { "id": "c-pp-rank", "item": "Reach a Powerplay rank that unlocks modules", "description": "Climb Power rank to unlock Power-specific modules like Prismatic Shields or Pacifiers.", "auto": null },
+        { "id": "c-pp-module", "item": "Acquire a Powerplay-exclusive module", "description": "Buy a Power-locked module after meeting the rank/pledge-time requirement.", "auto": null }
+      ]
+    },
+    {
+      "category": "Colonization / Trailblazers",
+      "blurb": "Claim an unpopulated system and build it up from a beacon to a full colony.",
+      "items": [
+        { "id": "c-col-claim", "item": "Claim a colonizable system", "description": "Use a System Colonisation contact to stake a claim on an unpopulated system.", "auto": { "type": "event", "events": ["ColonisationSystemClaim"] } },
+        { "id": "c-col-beacon", "item": "Deploy the colonization beacon / first construction site", "description": "Deploy the beacon that seeds the initial construction depot.", "auto": { "type": "event", "events": ["ColonisationBeaconDeployed"] } },
+        { "id": "c-col-deliver", "item": "Deliver commodities to build the first station", "description": "Haul required construction materials to the depot until the primary starport completes.", "auto": { "type": "event", "events": ["ColonisationContribution", "ColonisationConstructionDepot"] } },
+        { "id": "c-col-complete", "item": "Complete the primary port & take system control", "description": "Finishing the first port establishes the colony and grants control of the system.", "auto": null },
+        { "id": "c-col-secondary", "item": "Build secondary installations", "description": "Construct outposts, settlements, and orbital installations on other bodies to grow the colony.", "auto": null }
+      ]
+    },
+    {
+      "category": "Ship Milestones",
+      "blurb": "Grow from your first SRV to a full fleet and a 'big three' flagship.",
+      "items": [
+        { "id": "c-ship-srv", "item": "Deploy an SRV for the first time", "description": "Drop a Scarab or Scorpion from a planetary vehicle hangar to drive on a surface.", "auto": { "type": "event", "events": ["LaunchSRV"] } },
+        { "id": "c-ship-multicrew", "item": "Join or host multicrew", "description": "Team up in a single ship via multicrew as helm, gunner, or fighter.", "auto": { "type": "event", "events": ["JoinACrew", "CrewMemberJoins"] } },
+        { "id": "c-ship-sizes", "item": "Own a small, a medium, and a large ship", "description": "Progress through ship size classes across your fleet.", "auto": null },
+        { "id": "c-ship-bigthree", "item": "Buy a 'big three' ship (Anaconda / Corvette / Cutter)", "description": "Acquiring an Anaconda, Federal Corvette, or Imperial Cutter is a classic wealth milestone.", "auto": { "type": "shipOwnedAnyOf", "ships": ["anaconda", "federation_corvette", "cutter"] } },
+        { "id": "c-ship-fighter", "item": "Own a Ship-Launched Fighter and deploy it", "description": "Fit a fighter hangar and launch an SLF, optionally crewed by an NPC pilot.", "auto": { "type": "event", "events": ["LaunchFighter"] } },
+        { "id": "c-ship-fleet", "item": "Build a fleet and swap between ships", "description": "Store ships across stations and swap for different activities.", "auto": { "type": "event", "events": ["ShipyardSwap"] } }
+      ]
+    }
+  ]
+}

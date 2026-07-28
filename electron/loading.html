@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    html, body { height: 100%; margin: 0; background: #07080a; overflow: hidden; }
+    body { display: grid; place-items: center; font-family: "Segoe UI", system-ui, sans-serif; }
+    .wrap { text-align: center; }
+    .mark { font-size: 46px; color: #ff7a1a; text-shadow: 0 0 18px rgba(255,122,26,.7); }
+    .title { margin-top: 8px; font-size: 26px; font-weight: 700; letter-spacing: 7px; color: #fff; }
+    .sub { margin-top: 16px; color: #9c7c5c; letter-spacing: 3px; font-size: 12px; text-transform: uppercase; }
+    .dots::after { content: ''; animation: d 1.2s steps(4, end) infinite; }
+    @keyframes d { 0% { content: ''; } 25% { content: '.'; } 50% { content: '..'; } 75% { content: '...'; } }
+    .ring { margin: 26px auto 0; width: 46px; height: 46px; border: 3px solid rgba(255,122,26,.2); border-top-color: #ff7a1a; border-radius: 50%; animation: spin 1s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="mark">◆</div>
+    <div class="title">ED COMPANION</div>
+    <div class="sub">Establishing uplink · indexing journals<span class="dots"></span></div>
+    <div class="ring"></div>
+  </div>
+</body>
+</html>
