@@ -1,0 +1,13 @@
+{
+  "_note": "Rank tracks. `journalKey` maps to the field name in the journal 'Rank'/'Progress' events; the numeric value indexes into `tiers` (career ranks: 0=first tier .. 8=Elite, 9-13=Elite I-V).",
+  "tracks": [
+    { "id": "combat", "track": "Combat", "journalKey": "Combat", "kind": "career", "tiers": ["Harmless", "Mostly Harmless", "Novice", "Competent", "Expert", "Master", "Dangerous", "Deadly", "Elite", "Elite I", "Elite II", "Elite III", "Elite IV", "Elite V"] },
+    { "id": "trade", "track": "Trade", "journalKey": "Trade", "kind": "career", "tiers": ["Penniless", "Mostly Penniless", "Peddler", "Dealer", "Merchant", "Broker", "Entrepreneur", "Tycoon", "Elite", "Elite I", "Elite II", "Elite III", "Elite IV", "Elite V"] },
+    { "id": "exploration", "track": "Exploration", "journalKey": "Explore", "kind": "career", "tiers": ["Aimless", "Mostly Aimless", "Scout", "Surveyor", "Trailblazer", "Pathfinder", "Ranger", "Pioneer", "Elite", "Elite I", "Elite II", "Elite III", "Elite IV", "Elite V"] },
+    { "id": "mercenary", "track": "Mercenary", "journalKey": "Soldier", "kind": "career", "tiers": ["Defenceless", "Mostly Defenceless", "Rookie", "Soldier", "Gunslinger", "Warrior", "Gladiator", "Deadeye", "Elite", "Elite I", "Elite II", "Elite III", "Elite IV", "Elite V"] },
+    { "id": "exobiologist", "track": "Exobiologist", "journalKey": "Exobiologist", "kind": "career", "tiers": ["Directionless", "Mostly Directionless", "Compiler", "Collector", "Cataloguer", "Taxonomist", "Ecologist", "Geneticist", "Elite", "Elite I", "Elite II", "Elite III", "Elite IV", "Elite V"] },
+    { "id": "cqc", "track": "CQC", "journalKey": "CQC", "kind": "career", "tiers": ["Helpless", "Mostly Helpless", "Amateur", "Semi Professional", "Professional", "Champion", "Hero", "Legend", "Elite", "Elite I", "Elite II", "Elite III", "Elite IV", "Elite V"] },
+    { "id": "federation", "track": "Federation Navy", "journalKey": "Federation", "kind": "navy", "tiers": ["Recruit", "Cadet", "Midshipman", "Petty Officer", "Chief Petty Officer", "Warrant Officer", "Ensign", "Lieutenant", "Lieutenant Commander", "Post Commander", "Post Captain", "Rear Admiral", "Vice Admiral", "Admiral"] },
+    { "id": "empire", "track": "Empire Navy", "journalKey": "Empire", "kind": "navy", "tiers": ["Outsider", "Serf", "Master", "Squire", "Knight", "Lord", "Baron", "Viscount", "Count", "Earl", "Marquis", "Duke", "Prince", "King"] }
+  ]
+}
