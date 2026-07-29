@@ -7,15 +7,8 @@
 
 They are after me for this one... your support is optional but appreciated. 
 
+**[Support on Patreon → TheHorseCreates.com](https://thehorsecreates.com)**
 [![Support on Patreon](https://img.shields.io/badge/Patreon-Fuel%20the%20Operation-FF424D?style=for-the-badge&logo=patreon&logoColor=white)](https://thehorsecreates.com)
-
-
-<p align="center">
-  <a href="https://thehorsecreates.com">
-    <img src="https://img.shields.io/badge/Patreon-Fuel%20the%20Operation-FF424D?style=for-the-badge&logo=patreon&logoColor=white" alt="Support on Patreon" height="48">
-  </a>
-</p>
-
 
 
 Every CMDR's flight computer keeps a meticulous record of everything you do out in the black — the corporations just never meant for you to *read* it the way they do. **EliteCompanion** cracks that log open on your own terminal and turns it into a running dossier of your career. Whether you're a new pilot charting your first jumps, or a decorated veteran hunting for a reason to keep flying, EliteCompanion aims to give the denizens of the galaxy a heading.
