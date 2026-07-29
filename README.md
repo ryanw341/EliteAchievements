@@ -1,7 +1,7 @@
 # EliteCompanion
 
 > ⚠️ **UNSANCTIONED BUILD // DISTRIBUTE FREELY**
-> *This program was recovered from a corporate telemetry vault and leaked to the independent pilots of the galaxy. The megacorps have always harvested your flight data to sell it back to you. This does the same job — for you, and for nothing.*
+> *This program was recovered from a corporate telemetry vault and leaked to the independent pilots of the galaxy. The megacorps have always harvested your flight data to sell it back to you. This does the same job for you, and for free.*
 
 **Completely free and open source.** No account, no black market data brokers, no strings. The data of the people belongs to the people. 
 
@@ -22,26 +22,13 @@ locally and reads the journal files the game already writes.
 
 ## Quick start
 
-**No Node installed? Download the standalone release** — grab `ED-Companion-win-x64.zip`
-from the [Releases](../../releases) page, unzip it anywhere, and double-click
-**`ED Companion.bat`**. It bundles its own Node runtime, so there's nothing to install; a
-browser tab opens automatically. *(Everything runs locally — nothing is uploaded. If your
-terminal balks at the uncertified dispatch, that's expected — choose "More info → Run anyway.")*
+ Download from the [Releases](../../releases) page:
 
-**Have Node and the source?** Double-click **`ED-Companion.bat`** in the project root. It
-starts the server and opens the app in your browser automatically. Keep that window open
-while you play; close it to stop.
+- **`ED Companion Setup 0.1.0.exe`** — the installer (adds a Start-menu shortcut). Run it, then launch **ED Companion**.
+- **`ED-Companion-portable.exe`** — no install; just double-click to run.
 
-**Or from a terminal:**
-
-```bash
-npm start
-```
-
-Then open **`http://localhost:8787`** in your browser. Leave it running while you play;
-the header and screens update automatically as journal events arrive.
-
-Requires [Node.js](https://nodejs.org) 18+ (nothing to `npm install` — zero dependencies).
+Both are fully self-contained — nothing else to install, everything runs locally. *If your
+terminal balks at the uncertified dispatch, that's expected — choose "More info → Run anyway."*
 
 ## Features
 
@@ -110,33 +97,7 @@ src/
   web/           index.html, css, js (boot, header, ribbon, screens, checklist engine)
 ```
 
-## Desktop app
 
-The app also runs as a native desktop window with its own icon — no browser tab,
-no console window. The window simply hosts the same local server.
-
-```bash
-npm run app     # run the desktop app in development
-npm run dist    # build a Windows installer + portable .exe (in dist-app/)
-```
-
-`npm run dist` (electron-builder) produces, in `dist-app/`:
-
-- **`ED Companion Setup <version>.exe`** — an installer (Start-menu shortcut, add/remove).
-- **`ED-Companion-portable.exe`** — a single portable executable, no install.
-
-Both carry the app icon and bundle everything; end users need nothing installed. User data
-(checklist ticks, settings) is stored in the OS user-data folder so installed copies stay
-writable.
-
-## Building releases (maintainers)
-
-```bash
-npm run dist     # desktop installer + portable .exe  -> dist-app/
-npm run build    # alternative: server + bundled Node as a ZIP -> dist/
-```
-
-Attach the `dist-app/` installer (or the `dist/` ZIP) to a GitHub Release.
 
 ## Configuration
 
