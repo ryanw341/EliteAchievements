@@ -1,4 +1,13 @@
-# ED Companion
+# EliteCompanion
+
+> ⚠️ **UNSANCTIONED BUILD // DISTRIBUTE FREELY**
+> *This program was recovered from a corporate telemetry vault and leaked to the independent pilots of the galaxy. The megacorps have always harvested your flight data to sell it back to you. This does the same job — for you, and for nothing.*
+
+💠 **Completely free and open source.** No account, no black market data brokers, no strings. The data of the people belongs to the people. 
+
+They are after me for this one... your support is optional but appreciated. **[Support on Patreon → TheHorseCreates.com](https://thehorsecreates.com)**.
+
+Every CMDR's flight computer keeps a meticulous record of everything you do out in the black — the corporations just never meant for you to *read* it the way they do. **EliteCompanion** cracks that log open on your own terminal and turns it into a running dossier of your career. Whether you're a new pilot charting your first jumps, or a decorated veteran hunting for a reason to keep flying, EliteCompanion aims to give the denizens of the galaxy a heading.
 
 A local companion app for **Elite Dangerous**. It reads your Player Journal live and
 tracks your commander — net worth, navigation, ranks, engineers, permits, notable
@@ -7,6 +16,8 @@ systems and gameplay checklists — auto-populated from your save and updated as
 Built for CMDR use on Windows. No account, no cloud, no dependencies — everything runs
 locally and reads the journal files the game already writes.
 
+> 🛰️ **On the missing corporate seal.** This build carries no official certification — no megacorp signed off on it — so your terminal may flag it as an *"unrecognized publisher."* That's the whole point: certification costs credits and answers to a corporation; this answers to no one. The complete schematics are laid bare in this very repository for anyone to audit, line by line. It reads only the flight logs your game already writes to your own machine, and it transmits nothing. It phones no one.
+
 ![terminal boot → dashboard](docs-not-included)
 
 ## Quick start
@@ -14,7 +25,8 @@ locally and reads the journal files the game already writes.
 **No Node installed? Download the standalone release** — grab `ED-Companion-win-x64.zip`
 from the [Releases](../../releases) page, unzip it anywhere, and double-click
 **`ED Companion.bat`**. It bundles its own Node runtime, so there's nothing to install; a
-browser tab opens automatically. (Everything runs locally — nothing is uploaded.)
+browser tab opens automatically. *(Everything runs locally — nothing is uploaded. If your
+terminal balks at the uncertified dispatch, that's expected — choose "More info → Run anyway.")*
 
 **Have Node and the source?** Double-click **`ED-Companion.bat`** in the project root. It
 starts the server and opens the app in your browser automatically. Keep that window open
@@ -63,6 +75,8 @@ checkbox that persists locally (`data/user/progress.json`), so you can track thi
 can't confirm.
 
 ## How it works
+
+*No black-box telemetry, no uplink to a corporate server — just your own logs, decoded on your own hardware.*
 
 - On start it indexes **all** of your journal files once to reconstruct history (visited
   systems, ranks, engineers, owned ships, first-discoveries, etc.), then tails the active
@@ -130,3 +144,7 @@ Default journal folder (Windows):
 `%USERPROFILE%\Saved Games\Frontier Developments\Elite Dangerous`
 
 Change it in **Settings**, or edit `data/user/config.json` (`journalDir`, `port`).
+
+---
+
+*EliteCompanion is a fan-made tool, unaffiliated with Frontier Developments. All schematics open for inspection. Fly dangerous, CMDR.* o7
