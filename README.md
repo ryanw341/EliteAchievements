@@ -5,6 +5,10 @@
 
 **Completely free and open source.** No account, no black market data brokers, no strings. The data of the people belongs to the people. 
 
+
+<img width="1914" height="912" alt="image" src="https://github.com/user-attachments/assets/3b5e10e3-d9e2-4c18-9b1c-cd83d76f95f8" />
+
+
 They are after me for this one... your support is optional but appreciated. 
 
 **[Support on Patreon → TheHorseCreates.com](https://thehorsecreates.com)**
@@ -34,6 +38,11 @@ locally and reads the journal files the game already writes.
 
 Both are fully self-contained — nothing else to install, everything runs locally. *If your
 terminal balks at the uncertified dispatch, that's expected — choose "More info → Run anyway."*
+
+<img width="1914" height="912" alt="image" src="https://github.com/user-attachments/assets/6e0b23fe-f337-4fe1-8ad5-e8a258cc6f36" />
+
+<img width="1914" height="912" alt="image" src="https://github.com/user-attachments/assets/e1dd061e-5822-4763-acb4-cc81b74f013c" />
+
 
 ## Features
 
@@ -101,6 +110,10 @@ src/
   server/        config, journal reader, game-state reducer, HTTP + SSE server
   web/           index.html, css, js (boot, header, ribbon, screens, checklist engine)
 ```
+
+
+<img width="1914" height="912" alt="image" src="https://github.com/user-attachments/assets/62f8fc36-a9c3-4116-a507-4c24e14b4acb" />
+
 
 
 
