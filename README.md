@@ -3,7 +3,7 @@
 > ⚠️ **UNSANCTIONED BUILD // DISTRIBUTE FREELY**
 > *This program was recovered from a corporate telemetry vault and leaked to the independent pilots of the galaxy. The megacorps have always harvested your flight data to sell it back to you. This does the same job — for you, and for nothing.*
 
-💠 **Completely free and open source.** No account, no black market data brokers, no strings. The data of the people belongs to the people. 
+**Completely free and open source.** No account, no black market data brokers, no strings. The data of the people belongs to the people. 
 
 They are after me for this one... your support is optional but appreciated. **[Support on Patreon → TheHorseCreates.com](https://thehorsecreates.com)**.
 
@@ -16,7 +16,7 @@ systems and gameplay checklists — auto-populated from your save and updated as
 Built for CMDR use on Windows. No account, no cloud, no dependencies — everything runs
 locally and reads the journal files the game already writes.
 
-> 🛰️ **On the missing corporate seal.** This build carries no official certification — no megacorp signed off on it — so your terminal may flag it as an *"unrecognized publisher."* That's the whole point: certification costs credits and answers to a corporation; this answers to no one. The complete schematics are laid bare in this very repository for anyone to audit, line by line. It reads only the flight logs your game already writes to your own machine, and it transmits nothing. It phones no one.
+> **On the missing corporate seal.** This build carries no official certification — no megacorp signed off on it — so your terminal may flag it as an *"unrecognized publisher."* That's the whole point: certification costs credits and answers to a corporation; this answers to no one. The complete schematics are laid bare in this very repository for anyone to audit, line by line. It reads only the flight logs your game already writes to your own machine, and it transmits nothing. It phones no one.
 
 ![terminal boot → dashboard](docs-not-included)
 
@@ -112,7 +112,7 @@ src/
 
 ## Desktop app
 
-The app also runs as a native desktop window (Electron) with its own icon — no browser tab,
+The app also runs as a native desktop window with its own icon — no browser tab,
 no console window. The window simply hosts the same local server.
 
 ```bash
