@@ -27,8 +27,6 @@ locally and reads the journal files the game already writes.
 
 > // This build carries no official certification — no megacorp signed off on it — so your terminal may flag it as an *"unrecognized publisher."* The complete schematics are laid bare in this very repository for anyone to audit, line by line. It reads only the flight logs your game already writes to your own machine, and it transmits nothing.
 
-![terminal boot → dashboard](docs-not-included)
-
 ## Quick start
 
  Download from the [Releases](../../releases) page:
