@@ -55,7 +55,7 @@ function renderRibbon() {
   dom.ribbon.replaceChildren(
     el('div', { class: 'brand' }, [
       el('span', { class: 'brand-mark', text: '◆' }),
-      el('span', { class: 'brand-text', text: 'ED COMPANION' }),
+      el('span', { class: 'brand-text', text: 'ELITE ACHIEVEMENTS' }),
     ]),
     el('nav', { class: 'tabs' }, SCREENS.map((sc) =>
       el('button', {

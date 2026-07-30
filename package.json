@@ -1,13 +1,14 @@
 {
-  "name": "ed-companion",
+  "name": "elite-achievements",
   "version": "0.1.0",
   "private": true,
   "author": "CMDR Galaxy Father",
-  "description": "Elite Dangerous companion — reads the Player Journal live and tracks your commander's status, checklists, permits, and notable systems.",
+  "description": "EliteAchievements — Elite Dangerous achievement & progress tracker that reads the Player Journal live and tracks your commander's status, checklists, permits, and notable systems.",
   "type": "module",
   "main": "electron/main.cjs",
   "scripts": {
     "start": "node src/server/server.js",
+    "demo": "node demo/run-demo.mjs",
     "app": "electron .",
     "build": "node build/build.mjs",
     "dist": "electron-builder --win"
@@ -20,8 +21,8 @@
     "electron-builder": "^26.15.3"
   },
   "build": {
-    "appId": "com.galaxyfather.edcompanion",
-    "productName": "ED Companion",
+    "appId": "com.thehorsecreates.eliteachievements",
+    "productName": "EliteAchievements",
     "asar": false,
     "directories": {
       "output": "dist-app",
@@ -44,10 +45,10 @@
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true,
-      "shortcutName": "ED Companion"
+      "shortcutName": "EliteAchievements"
     },
     "portable": {
-      "artifactName": "ED-Companion-portable.exe"
+      "artifactName": "EliteAchievements-portable.exe"
     }
   }
 }

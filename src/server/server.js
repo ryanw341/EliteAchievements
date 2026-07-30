@@ -1,4 +1,4 @@
-// Elite Dangerous companion — local server.
+// EliteAchievements — local server for Elite Dangerous.
 // Indexes the full journal history on start, then tails the live journal and
 // pushes derived commander state to the browser over Server-Sent Events.
 import http from 'node:http';
@@ -273,8 +273,16 @@ rebuild();
 setInterval(tick, 800);
 
 const port = config.port || 8787;
+server.on('error', (err) => {
+  if (err && err.code === 'EADDRINUSE') {
+    console.error(`\n  [ed] Port ${port} is already in use — EliteAchievements may already be running.`);
+    console.error(`  Close the other instance, or set a different port via ED_COMPANION_PORT.\n`);
+    process.exit(1);
+  }
+  throw err;
+});
 server.listen(port, () => {
-  console.log(`\n  ┌─ ED COMPANION ─────────────────────────────`);
+  console.log(`\n  ┌─ ELITE ACHIEVEMENTS ───────────────────────`);
   console.log(`  │  Open  http://localhost:${port}`);
   console.log(`  │  CMDR  ${state.commander.name || '(no journal found)'}`);
   console.log(`  └────────────────────────────────────────────\n`);

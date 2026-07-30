@@ -1,4 +1,4 @@
-# EliteCompanion
+# EliteAchievements
 
 > ⚠️ **UNSANCTIONED BUILD // DISTRIBUTE FREELY**
 > *This program was recovered from a corporate telemetry vault and leaked to the independent pilots of the galaxy. The megacorps have always harvested your flight data to sell it back to you. This does the same job for you, and for free.*
@@ -16,7 +16,7 @@ They are after me for this one... your support is optional but appreciated.
 [![Support on Patreon](https://img.shields.io/badge/Patreon-Fuel%20the%20Operation-FF424D?style=for-the-badge&logo=patreon&logoColor=white)](https://thehorsecreates.com)
 
 
-Every CMDR's flight computer keeps a meticulous record of everything you do out in the black — the corporations just never meant for you to *read* it the way they do. **EliteCompanion** cracks that log open on your own terminal and turns it into a running dossier of your career. Whether you're a new pilot charting your first jumps, or a decorated veteran hunting for a reason to keep flying, EliteCompanion aims to give the denizens of the galaxy a heading.
+Every CMDR's flight computer keeps a meticulous record of everything you do out in the black — the corporations just never meant for you to *read* it the way they do. **EliteAchievements** cracks that log open on your own terminal and turns it into a running dossier of your career. Whether you're a new pilot charting your first jumps, or a decorated veteran hunting for a reason to keep flying, EliteAchievements aims to give the denizens of the galaxy a heading.
 
 A local companion app for **Elite Dangerous**. It reads your Player Journal live and
 tracks your commander — net worth, navigation, ranks, engineers, permits, notable
@@ -31,8 +31,8 @@ locally and reads the journal files the game already writes.
 
  Download from the [Releases](../../releases) page:
 
-- **`ED Companion Setup 0.1.0.exe`** — the installer (adds a Start-menu shortcut). Run it, then launch **ED Companion**.
-- **`ED-Companion-portable.exe`** — no install; just double-click to run.
+- **`EliteAchievements Setup 0.1.0.exe`** — the installer (adds a Start-menu shortcut). Run it, then launch **EliteAchievements**.
+- **`EliteAchievements-portable.exe`** — no install; just double-click to run.
 
 Both are fully self-contained — nothing else to install, everything runs locally. *If your
 terminal balks at the uncertified dispatch, that's expected — choose "More info → Run anyway."*
@@ -124,4 +124,4 @@ Change it in **Settings**, or edit `data/user/config.json` (`journalDir`, `port`
 
 ---
 
-*EliteCompanion is a fan-made tool, unaffiliated with Frontier Developments. All schematics open for inspection. Fly dangerous, CMDR.* o7
+*EliteAchievements is a fan-made tool, unaffiliated with Frontier Developments. All schematics open for inspection. Fly dangerous, CMDR.* o7

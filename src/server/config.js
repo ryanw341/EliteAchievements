@@ -29,11 +29,13 @@ export function defaultJournalDir() {
 
 export function loadConfig() {
   const envPort = Number(process.env.ED_COMPANION_PORT) || 0;
-  const defaults = { journalDir: defaultJournalDir(), port: envPort || 8787 };
+  const envJournal = process.env.ED_COMPANION_JOURNAL_DIR || '';
+  const defaults = { journalDir: envJournal || defaultJournalDir(), port: envPort || 8787 };
   try {
     const raw = JSON.parse(fs.readFileSync(CONFIG_PATH, 'utf8'));
     const merged = { ...defaults, ...raw };
-    if (envPort) merged.port = envPort;      // env wins for the desktop app
+    if (envPort) merged.port = envPort;          // env wins for the desktop app
+    if (envJournal) merged.journalDir = envJournal; // env wins for demo mode
     return merged;
   } catch {
     return defaults;

@@ -173,7 +173,7 @@ const settings = {
         kv('Last update', ctx.state?.lastUpdate ? new Date(ctx.state.lastUpdate).toLocaleString() : '—'),
       ]),
       card('About', [
-        el('p', { class: 'muted', html: 'ED Companion reads your Player Journal live. Leave it running while you play — the header and dashboard update as events arrive. More screens (Engineers, Permits, Notable Systems, Milestones…) are being added.' }),
+        el('p', { class: 'muted', html: 'EliteAchievements reads your Player Journal live. Leave it running while you play — the header and dashboard update as events arrive.' }),
       ]),
     ]));
   },

@@ -1,5 +1,5 @@
-// Electron main process — runs the local companion server in-process and shows
-// it in a native window. Reuses the exact same server + web UI.
+// Electron main process — runs the local EliteAchievements server in-process
+// and shows it in a native window. Reuses the exact same server + web UI.
 const { app, BrowserWindow, shell, Menu } = require('electron');
 const path = require('node:path');
 const http = require('node:http');
@@ -19,7 +19,7 @@ function createWindow() {
     minWidth: 960,
     minHeight: 640,
     backgroundColor: '#07080a',
-    title: 'ED Companion',
+    title: 'EliteAchievements',
     icon: path.join(__dirname, 'icon.png'),
     autoHideMenuBar: true,
     show: false,
@@ -77,7 +77,7 @@ if (!app.requestSingleInstanceLock()) {
       if (win) {
         win.loadURL('data:text/html,' + encodeURIComponent(
           `<body style="background:#07080a;color:#ff5a3c;font-family:sans-serif;padding:40px">`
-          + `<h2>Couldn't start ED Companion</h2><pre>${String(err && err.message || err)}</pre></body>`));
+          + `<h2>Couldn't start EliteAchievements</h2><pre>${String(err && err.message || err)}</pre></body>`));
       }
     }
 

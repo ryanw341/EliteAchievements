@@ -8,7 +8,7 @@ import { execSync } from 'node:child_process';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
-const APP = path.join(DIST, 'ED-Companion');
+const APP = path.join(DIST, 'EliteAchievements');
 
 console.log('Cleaning dist/ ...');
 fs.rmSync(DIST, { recursive: true, force: true });
@@ -29,11 +29,11 @@ console.log('Writing launcher + notes ...');
 const launcher = [
   '@echo off',
   'setlocal',
-  'title ED Companion',
+  'title EliteAchievements',
   'cd /d "%~dp0"',
   '',
   'echo.',
-  'echo   ED COMPANION is starting...',
+  'echo   ELITE ACHIEVEMENTS is starting...',
   'echo   A browser tab will open at http://localhost:8787 once it is ready',
   'echo   (first launch scans your Elite Dangerous journals).',
   'echo.',
@@ -46,13 +46,13 @@ const launcher = [
   '"%~dp0runtime\\node.exe" "%~dp0src\\server\\server.js"',
   '',
 ].join('\r\n');
-fs.writeFileSync(path.join(APP, 'ED Companion.bat'), launcher);
+fs.writeFileSync(path.join(APP, 'EliteAchievements.bat'), launcher);
 
 const readme = [
-  'ED COMPANION — quick start',
+  'ELITE ACHIEVEMENTS — quick start',
   '==========================',
   '',
-  '1. Double-click "ED Companion.bat".',
+  '1. Double-click "EliteAchievements.bat".',
   '2. A browser tab opens automatically at http://localhost:8787.',
   '3. Leave the black window open while you play; close it to stop.',
   '',
@@ -66,7 +66,7 @@ const readme = [
 fs.writeFileSync(path.join(APP, 'READ ME FIRST.txt'), readme);
 
 console.log('Zipping release ...');
-const zip = path.join(DIST, 'ED-Companion-win-x64.zip');
+const zip = path.join(DIST, 'EliteAchievements-win-x64.zip');
 execSync(
   `powershell -NoProfile -Command "Compress-Archive -Path '${APP}' -DestinationPath '${zip}' -Force"`,
   { stdio: 'inherit' },
@@ -74,4 +74,4 @@ execSync(
 
 const sizeMB = (fs.statSync(zip).size / 1e6).toFixed(1);
 console.log(`\nDone -> ${zip} (${sizeMB} MB)`);
-console.log('Attach this ZIP to a GitHub Release. Users unzip and run "ED Companion.bat".');
+console.log('Attach this ZIP to a GitHub Release. Users unzip and run "EliteAchievements.bat".');

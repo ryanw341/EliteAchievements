@@ -1,6 +1,6 @@
 @echo off
 setlocal
-title ED Companion
+title EliteAchievements
 cd /d "%~dp0"
 
 where node >nul 2>nul
@@ -15,7 +15,7 @@ if errorlevel 1 (
 
 echo.
 echo   =====================================================
-echo    ED COMPANION
+echo    ELITE ACHIEVEMENTS
 echo    Starting the local server...
 echo    A browser tab will open at http://localhost:8787
 echo    once it's ready (first launch scans your journals).
